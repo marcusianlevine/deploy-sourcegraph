@@ -11,7 +11,13 @@ data:
       //
       // Other providers are documented here:
       // https://about.sourcegraph.com/docs/config/site#authproviders-array
-      "auth.providers": [{"type": "builtin", "allowSignup": false}]
+      "auth.providers": [{"type": "builtin", "allowSignup": false}],
+      "github": [
+        {
+          "token": "${GH_ACCESS_TOKEN}",
+          "url": "https://github.com"
+        }
+      ]
     }
 kind: ConfigMap
 metadata:
