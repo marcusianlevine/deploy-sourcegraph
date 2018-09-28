@@ -1,0 +1,6 @@
+rancher:
+  project: Ops
+  manifests:
+    - path: ../base/
+      label: sourcegraph
+      namespace: sourcegraph

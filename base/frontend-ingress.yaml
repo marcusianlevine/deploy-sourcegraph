@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    zalando.org/aws-load-balancer-scheme: internal
+  labels:
+    app: sourcegraph-frontend
+    deploy: sourcegraph
+  name: sourcegraph-internal
+spec:
+  rules:
+  - host: ${INGRESS_URL}
+    http:
+      paths:
+      - backend:
+          serviceName: sourcegraph-frontend
+          servicePort: http
+        path: /
