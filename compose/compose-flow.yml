@@ -4,3 +4,9 @@ rancher:
     - path: ../base/
       label: sourcegraph
       namespace: sourcegraph
+
+remotes:
+  dev:
+    backend: rancher
+  prod:
+    backend: rancher
